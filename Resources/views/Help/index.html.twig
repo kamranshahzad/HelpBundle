@@ -1,0 +1,61 @@
+{% extends themes %}
+
+
+{% block body %}
+<h1> Help </h1>
+
+    {{ help_text | raw }}
+
+
+    <a href="#">Click</a>
+
+    <div id="content-placeholder"></div>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+
+
+
+        $(function () {
+
+            //loadForm('system_settings');
+
+            $( "#SettingsMenuOptions li a" ).on( "click", function(event) {
+                event.preventDefault();
+                var formId = $(this).data('url');
+                loadForm(formId);
+            });
+        });
+
+
+        function loadHelpTemplate(templateId){
+
+        }
+
+
+        $( "#helpLinks li a" ).on( "click", function(event) {
+            event.preventDefault();
+            var source   = $("#page-template").html();
+            var template = Handlebars.compile(source);
+            var data = {};
+            $("#content-placeholder").html(template(data));
+        });
+
+
+
+        /*var source   = $("#some-template").html();
+        var template = Handlebars.compile(source);
+        var data = { users: [
+            {username: "alan", firstName: "Alan", lastName: "Johnson", email: "alan@test.com" },
+            {username: "allison", firstName: "Allison", lastName: "House", email: "allison@test.com" },
+            {username: "ryan", firstName: "Ryan", lastName: "Carson", email: "ryan@test.com" }
+        ]};
+        $("#content-placeholder").html(template(data));*/
+    });
+</script>
+
+
+
+{% endblock body %}

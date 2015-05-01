@@ -1,0 +1,28 @@
+<style type="text/css">
+    ul#helpLinks {
+        list-style-type: none;
+    }
+    ul#helpLinks li a {
+        display: block;
+        text-decoration: none;
+        padding: 8px;
+        font-size: 14px;
+    }
+    ul#helpLinks li a:link, a:visited { color: #fff; }
+    ul#helpLinks li a:hover, a:active { color: gray; }
+</style>
+
+
+<ul class="nav">
+{% for link in links %}
+    <li><a href="">{{ link|e }}</a></li>
+{% endfor %}
+</ul>
+
+<div class="sidebar-menu-options">
+    <ul id="helpLinks">
+        <li><a href="#" data-url="organization"><i class="fa fa-chevron-right"></i> Organizations</a></li>
+        <li><a href="#" data-url="users"><i class="fa fa-chevron-right"></i> Users</a></li>
+        <li><a href="#" data-url="about"><i class="fa fa-chevron-right"></i> About Cogilent</a></li>
+    </ul>
+</div>

@@ -1,0 +1,9 @@
+<layout>
+
+    <regions>
+        <sidebar>
+            <help rule="/help" template="help-sidebar.html.twig">\Cogilent\HelpBundle\Service\Blocks::getHelpLinks</help>
+        </sidebar>
+    </regions>
+
+</layout>

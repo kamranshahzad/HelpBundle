@@ -1,0 +1,3 @@
+_kamran_help_urls:
+    resource: "@KamranHelpBundle/Controller"
+    type: annotation
